@@ -1,38 +1,26 @@
-import java.util.Scanner; 
-public class perfect 
-{ 
-public static void main(String args[]) 
-{ 
-long n, sum=0; 
-Scanner sc=new Scanner(System.in); 
-System.out.print("Enter the number: "); 
-
-n=sc.nextLong();
-if(n<0){
-    System.out.println("enter only postive nums");
-    System.exit(1);
-} 
-{ 
-int i=1; 
- 
-while(i <= n/2) 
-{ 
-if(n % i == 0) 
-{ 
-
-sum = sum + i; 
-} 
-i++; 
-} 
-
-if(sum==n) 
-{ 
- 
-System.out.println(n+" is a perfect number."); 
-} 
-else 
- 
-System.out.println(n+" is not a perfect number."); 
+import java.util.*;
+public class factor
+{
+public static void main(String[] args)
+{
+int num,n;
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number : ");
+num = sc.nextInt();
+System.out.println("Enter Nth factor:");
+n= sc.nextInt();
+int i, count = 0;
+for(i = 1; i <= num; i++)
+{
+if(num % i == 0)
+{
+count = count + 1;
+if(count==n)
+{
+ System.out.println(n+ "th Factor is "+i);
 }
+}
+}
+System.out.print("\nTotal factors of " + num + " : " + count);
 }
 }
